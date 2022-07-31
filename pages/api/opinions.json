@@ -1,31 +1,31 @@
 {
     "opinions": [
         {
-            "avatar": "./avatars/av1.svg",
+            "avatar": "/avatars/av1.svg",
             "name": "Shaun Mantooth",
             "heading": "The best sunscreen on the market.",
             "paragraph": "Nam ultrices non elit quis bibendum. Aliquam molestie elit vitae quam efficitur facilisis. Sed auctor ipsum euismod, finibus tellus vitae, tempor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget mi urna. Sed quis faucibus odio. Proin sit amet tortor sit amet neque facilisis iaculis."
         },
         {
-            "avatar": "./avatars/av2.svg",
+            "avatar": "/avatars/av2.svg",
             "name": "Jimmy Owens",
             "heading": "A worthwhile investition.",
             "paragraph": "Nunc ante quam, elementum et ultrices sit amet, faucibus vel justo. Suspendisse accumsan bibendum turpis sit amet luctus. Curabitur lectus dolor, commodo sed luctus ac, egestas a metus. Praesent quis euismod arcu. Suspendisse potenti."
         },
         {
-            "avatar": "./avatars/av3.svg",
+            "avatar": "/avatars/av3.svg",
             "name": "Susan Hicks",
             "heading": "It met my expectations.",
             "paragraph": "Sed eu magna purus. Vestibulum dapibus nibh in neque facilisis porttitor. Nullam a magna ac erat hendrerit congue. Aliquam iaculis blandit rutrum. Integer non lectus fermentum, faucibus urna et, tempus nulla."
         },
         {
-            "avatar": "./avatars/av4.svg",
+            "avatar": "/avatars/av4.svg",
             "name": "Gina Hendrickson",
             "heading": "Incredible product!",
             "paragraph": "Sed maximus sodales nulla sed tristique. Nam finibus enim non enim sollicitudin rutrum. Vivamus sodales vestibulum arcu in iaculis. Ut cursus mattis sapien, eu fringilla eros."
         },
         {
-            "avatar": "./avatars/av5.svg",
+            "avatar": "/avatars/av5.svg",
             "name": "Ryan Beavers",
             "heading": "The absolute best!",
             "paragraph": "Vivamus sit amet nulla rhoncus, facilisis nibh eget, malesuada enim. Nulla eros ante, vulputate vitae pretium dapibus, semper quis nulla. Quisque tincidunt, lectus malesuada imperdiet tincidunt."
