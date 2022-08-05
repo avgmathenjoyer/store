@@ -62,7 +62,7 @@ function Hero() {
           </h2>
         </div>
         <div className='hidden lg:block mr-[10vh] pt-[20vh] xl:mr-[22vh] xl:pt-[10vh] 2xl:pt-0 w-2/5 h-screen items-center'>
-          <Image layout="responsive" width="100%" height="100%" alt="beach day illustration" src="/beach.svg" />
+          <Image layout="responsive" width="100%" height="100%" alt="beach day illustration" src="/beach.svg" priority/>
         </div>
       </div>
     </section>
