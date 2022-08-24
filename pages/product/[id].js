@@ -3,7 +3,11 @@ import React from 'react'
 
 import { connectToDatabase } from '../../lib/mongodb'
 
+import Nav from '../../components/Navigation'
+
 import Image from 'next/image'
+import Head from 'next/head'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper';
 
@@ -15,13 +19,20 @@ import "swiper/css/navigation";
 export default function Product({ product }) {
 
     return (
-        <div className='w-3/4 mr-auto ml-auto mt-12'>
-            <DescriptionSection product={product} />
-            <PhotoSection productPhotos={product.photos} />
-            <FeatureSection heading="Probably the best sunscreen in the world" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sunset.svg" />
-            <FeatureSection heading="The absolute best for sensitive screen" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/beach-feature.svg" />
-            <FeatureSection heading="Enjoy the sun without any worries" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sea.svg" />
+        <div className='w-screen'>
+            <Nav />
+            <div className='w-3/4 mr-auto ml-auto mt-12'>
+                <Head>
+                    <title>{product.name}</title>
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                </Head>
+                <DescriptionSection product={product} />
+                <PhotoSection productPhotos={product.photos} />
+                <FeatureSection heading="Probably the best sunscreen in the world" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sunset.svg" />
+                <FeatureSection heading="The absolute best for sensitive screen" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/beach-feature.svg" />
+                <FeatureSection heading="Enjoy the sun without any worries" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sea.svg" />
 
+            </div>
         </div>
     )
 }
@@ -64,7 +75,7 @@ function PhotoSection({ productPhotos }) {
                 navigation={true}
                 breakpoints={
                     {
-                        1500: { slidesPerView: 2 },
+                        1240: { slidesPerView: 2 },
                         1920: { slidesPerView: 3 },
                     }
                 }
@@ -76,7 +87,7 @@ function PhotoSection({ productPhotos }) {
     )
 }
 
-function FeatureSection({ heading, subheading, img}) {
+function FeatureSection({ heading, subheading, img }) {
     return (
         <div className={`flex flex-col lg:flex-row w-full my-8 bg-slate-200 rounded-xl p-4`}>
             <div className='w-full lg:w-4/5 my-5'>

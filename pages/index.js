@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
-import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation } from 'swiper';
 import * as opinions from "./api/opinions.json"
-
+import Nav from '../components/Navigation';
 
 import 'swiper/css';
 import "swiper/css/pagination";
@@ -31,28 +30,13 @@ export default function Home() {
     </div>
   )
 }
-function NavigationSection() {
-  return (<nav className='m-4 flex items-center'>
-    <Link href="/"><h3 className='text-4xl'><span className='text-yellow-600 font-bold'>Sun</span>Shop</h3></Link>
-    <div className='flex items-center text-lg ml-auto'>
-      <Link href="#about"><a className='m-3'>
-        ABOUT
-      </a></Link>
-      <Link href="#reviews" scroll={false}><a className='m-3'>
-        REVIEWS
-      </a></Link>
-      <Link href="/offer"><button className='bg-yellow-600 p-2 shadow-lg px-4 rounded-lg text-white font-bold m-3'>
-        OFFER
-      </button></Link>
-    </div>
-  </nav>)
-}
+
 
 
 function Hero() {
   return (
     <section className='w-full h-screen bg-gradient-radial my-4'>
-      <NavigationSection />
+      <Nav />
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className='mt-[30vh] lg:ml-32 m-16'>
           <h1 className='text-7xl font-bold'>
