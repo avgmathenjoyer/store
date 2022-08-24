@@ -60,15 +60,27 @@ function PhotoSection({ productPhotos }) {
                 navigation={true}
                 breakpoints={
                     {
-                        1500: {slidesPerView: 2},
+                        1500: { slidesPerView: 2 },
                         1920: { slidesPerView: 3 },
                     }
                 }
-                
+
             >
                 {photos}
             </Swiper>
         </section>
+    )
+}
+
+function FeatureSection({ heading, subheading, img, reverse }) {
+    return (
+        <div className='flex flex-col md:flex-row'>
+            <div>
+                <h1>{heading}</h1>
+                <p>{subheading}</p>
+            </div>
+            <Image href={img}/>
+        </div>
     )
 }
 
