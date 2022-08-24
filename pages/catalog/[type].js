@@ -3,6 +3,8 @@ import { connectToDatabase } from '../../lib/mongodb'
 import OfferCard from '../../components/OfferCard'
 import Link from 'next/link'
 
+import Head from 'next/head'
+
 export default function Products({ offers, type }) {
 
     const [checkboxType, setType] = useState(type)
@@ -21,6 +23,9 @@ export default function Products({ offers, type }) {
 
     return (
         <div className='w-5/6 mr-auto ml-auto'>
+            <Head>
+                <title>{type} offer</title>
+            </Head>
             <h1 className='font-bold text-7xl text-yellow-600 m-4'>Our offer</h1>
             <div className='bg-slate-200 w-full min-h-[128px] rounded-t-2xl flex flex-col lg:flex-row'>
                 <div className='flex flex-col p-4 m-1 lg:m-3'>

@@ -139,7 +139,7 @@ function ContactForm() {
         <h2 className='text-4xl'>Interested in our sunscreen?</h2>
         <h1 className='text-6xl font-bold'>Contact us!</h1>
         <div className='flex items-center mt-4'>
-          <input className='w-full h-12 border-2 border-black rounded-xl shadow-2xl text-lg p-2' placeholder='Type your email here!' onChange={(evt) => setText(evt.target.value)} value={text} />
+          <input className='w-3/4 h-12 border-2 border-black rounded-xl shadow-2xl text-lg p-2' placeholder='Type your email here!' onChange={(evt) => setText(evt.target.value)} value={text} />
           <button className='w-12 h-12 bg-green-500 rounded-lg text-white ml-1'>✓</button>
         </div>
       </div>

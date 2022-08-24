@@ -6,7 +6,6 @@ import { connectToDatabase } from '../lib/mongodb';
 import Nav from '../components/Navigation';
 import OfferCard from '../components/OfferCard';
 
-import Image from 'next/image';
 import Head from 'next/head'
 import Link from 'next/link';
 
@@ -20,6 +19,7 @@ export default function Offer(props) {
     <div className='w-screen min-h-screen bg-gradient-radial'>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <title>Offer</title>
       </Head>
       <Nav />
       <section className='py-16'>
