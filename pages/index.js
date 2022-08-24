@@ -39,10 +39,10 @@ function Hero() {
       <Nav />
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className='mt-[30vh] lg:ml-32 m-16'>
-          <h1 className='text-7xl font-bold'>
+          <h1 className='text-4xl md:text-7xl font-bold'>
             Don&apos;t get <span className='text-yellow-600 font-extrabold drop-shadow-xl'>sunburnt</span> <br /> ever again
           </h1>
-          <h2 className='text-5xl mt-3'>
+          <h2 className='text-2xl md:text-5xl mt-3'>
             Check our sunscreen offer.
           </h2>
         </div>
@@ -60,10 +60,10 @@ function StarsSection() {
       <div className='ml-auto mr-auto w-1/4'>
         <Image alt="stars illustration" layout="responsive" width="100%" height="30%" src="/5stars.svg" />
       </div>
-      <h1 className='text-6xl font-bold'>
+      <h1 className='text-4xl md:text-6xl font-bold'>
         Sunscreen <span className='text-yellow-600 drop-shadow-xl'>engineered</span> to be <br /> the best on the market
       </h1>
-      <h2 className='text-3xl'>
+      <h2 className='text-xl md:text-3xl'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
       </h2>
     </section>
