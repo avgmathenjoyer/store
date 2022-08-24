@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation } from 'swiper';
 import * as opinions from "./api/opinions.json"
@@ -17,14 +18,14 @@ export default function Home() {
         <title>SunShop</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Hero />
-      <StarsSection />
+      <Hero/>
+      <StarsSection/>
       <div className='bg-gradient-radial'>
         <FeatureSection reversed={false} imagePath="/woman.svg" mainCaption="Not just a sunscreen." explanation="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
         <FeatureSection reversed={true} imagePath="/nature.svg" mainCaption="Sun rays are dangerous." explanation="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
         <FeatureSection reversed={false} imagePath="/sunlight.svg" mainCaption="Don't let the sun interfere." explanation="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." />
       </div>
-      <OpinionSection opinions={opinions.opinions} />
+      <OpinionSection id="reviews" opinions={opinions.opinions} />
       <ContactForm />
       <Footer />
     </div>
@@ -32,17 +33,17 @@ export default function Home() {
 }
 function NavigationSection() {
   return (<nav className='m-4 flex items-center'>
-    <h3 className='text-4xl'><span className='text-yellow-600 font-bold'>Sun</span>Shop</h3>
+    <Link href="/"><h3 className='text-4xl'><span className='text-yellow-600 font-bold'>Sun</span>Shop</h3></Link>
     <div className='flex items-center text-lg ml-auto'>
-      <h3 className='m-3'>
+      <Link href="#about"><a className='m-3'>
         ABOUT
-      </h3>
-      <h3 className='m-3'>
+      </a></Link>
+      <Link href="#reviews" scroll={false}><a className='m-3'>
         REVIEWS
-      </h3>
-      <button className='bg-yellow-600 p-2 shadow-lg px-4 rounded-lg text-white font-bold m-3'>
+      </a></Link>
+      <Link href="/offer"><button className='bg-yellow-600 p-2 shadow-lg px-4 rounded-lg text-white font-bold m-3'>
         OFFER
-      </button>
+      </button></Link>
     </div>
   </nav>)
 }
@@ -71,7 +72,7 @@ function Hero() {
 
 function StarsSection() {
   return (
-    <section className='h-1/3 w-5/6 m-auto text-center my-4 mb-12'>
+    <section className='h-1/3 w-5/6 m-auto text-center my-4 mb-12' id="about">
       <div className='ml-auto mr-auto w-1/4'>
         <Image alt="stars illustration" layout="responsive" width="100%" height="30%" src="/5stars.svg" />
       </div>
@@ -109,7 +110,7 @@ function OpinionSection({ opinions }) {
     <SwiperSlide key={opinion.avatar}><Opinion name={opinion.name} avatar={opinion.avatar} heading={opinion.heading} paragraph={opinion.paragraph} /></SwiperSlide>
   )
   return (
-    <section>
+    <section id="reviews">
       <h1 className='text-6xl font-bold text-center'>How do our customers view us?</h1>
       <Swiper
         spaceBetween={10}

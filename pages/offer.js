@@ -98,7 +98,7 @@ function NavigationSection() {
   </nav>)
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let { db } = await connectToDatabase()
 
   const offersPro = await db
