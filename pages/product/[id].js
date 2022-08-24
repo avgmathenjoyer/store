@@ -18,6 +18,10 @@ export default function Product({ product }) {
         <div className='w-3/4 mr-auto ml-auto mt-12'>
             <DescriptionSection product={product} />
             <PhotoSection productPhotos={product.photos} />
+            <FeatureSection heading="Probably the best sunscreen in the world" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sunset.svg" />
+            <FeatureSection heading="The absolute best for sensitive screen" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/beach-feature.svg" />
+            <FeatureSection heading="Enjoy the sun without any worries" subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus ullamcorper tempor. Etiam euismod bibendum sapien non pretium. Mauris consequat eros metus, in eleifend turpis accumsan et. Praesent efficitur accumsan ligula id blandit. Pellentesque commodo blandit eros, eu vestibulum leo. Proin lacinia volutpat nunc et auctor. Duis eleifend, lacus quis egestas aliquam, justo sem elementum augue, vel facilisis dui felis ac mi." img="/sea.svg" />
+
         </div>
     )
 }
@@ -25,13 +29,13 @@ export default function Product({ product }) {
 function DescriptionSection({ product }) {
     return (
         <div className='flex flex-col lg:flex-row my-8 bg-slate-200 rounded-xl'>
-            <div className='w-full min-h-[512px] lg:w-1/3 p-4 lg:p-8'>
+            <div className='w-full lg:w-1/3 p-4 lg:p-8'>
                 <Image src={`/${product.img}`} layout="responsive" width="80%" height="80%" />
             </div>
             <div className='w-full lg:w-2/3 p-8'>
-                <h1 className='text-7xl font-bold m-4'>{product.name}</h1>
-                <h2 className='text-5xl m-4'>{product.subheading}</h2>
-                <p className='text-2xl m-4 leading-8 indent-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum quisque. Scelerisque in dictum non consectetur a erat. Eget aliquet nibh praesent tristique magna sit. Non curabitur gravida arcu ac tortor dignissim convallis. Iaculis nunc sed augue lacus viverra vitae congue eu. Gravida rutrum quisque non tellus orci ac auctor. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Tellus id interdum velit laoreet id donec ultrices. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.</p>
+                <h1 className='text-5xl md:text-7xl font-bold m-4'>{product.name}</h1>
+                <h2 className='text-4xl md:text-5xl m-4'>{product.subheading}</h2>
+                <p className='text-xl md:text-2xl m-4 leading-8 indent-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum quisque. Scelerisque in dictum non consectetur a erat. Eget aliquet nibh praesent tristique magna sit. Non curabitur gravida arcu ac tortor dignissim convallis. Iaculis nunc sed augue lacus viverra vitae congue eu. Gravida rutrum quisque non tellus orci ac auctor. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Tellus id interdum velit laoreet id donec ultrices. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.</p>
                 <div className='flex justify-end text-4xl font-bold items-end'>
                     <h2>Price: <span className='text-green-600'>{product.price} EUR</span></h2>
                 </div>
@@ -72,14 +76,16 @@ function PhotoSection({ productPhotos }) {
     )
 }
 
-function FeatureSection({ heading, subheading, img, reverse }) {
+function FeatureSection({ heading, subheading, img}) {
     return (
-        <div className='flex flex-col md:flex-row'>
-            <div>
-                <h1>{heading}</h1>
-                <p>{subheading}</p>
+        <div className={`flex flex-col lg:flex-row w-full my-8 bg-slate-200 rounded-xl p-4`}>
+            <div className='w-full lg:w-4/5 my-5'>
+                <h1 className='text-6xl font-bold'>{heading}</h1>
+                <p className='text-2xl'>{subheading}</p>
             </div>
-            <Image href={img}/>
+            <div className='w-full lg:w-1/5 p-8 m-auto'>
+                <Image layout='responsive' width="100%" height="100%" src={img} />
+            </div>
         </div>
     )
 }

@@ -32,7 +32,7 @@ export default function Offer(props) {
 
 function OfferShowcase({ heading, subheading, possibleOffers, type }) {
 
-  const offers = possibleOffers.map((offer) => <SwiperSlide>
+  const offers = possibleOffers.map((offer) => <SwiperSlide key={offer.id}>
     <OfferCard name={offer.name} price={offer.price} img={offer.img} subheading={offer.subheading} />
   </SwiperSlide>)
 
