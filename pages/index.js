@@ -40,7 +40,7 @@ function Hero() {
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className='mt-[30vh] lg:ml-32 m-16'>
           <h1 className='text-7xl font-bold'>
-            Don't get <span className='text-yellow-600 font-extrabold drop-shadow-xl'>sunburnt</span> <br /> ever again
+            Don&apos;t get <span className='text-yellow-600 font-extrabold drop-shadow-xl'>sunburnt</span> <br /> ever again
           </h1>
           <h2 className='text-5xl mt-3'>
             Check our sunscreen offer.

@@ -57,7 +57,7 @@ function DescriptionSection({ product }) {
 
 function PhotoSection({ productPhotos }) {
 
-    const photos = productPhotos.map((photo) => <SwiperSlide>
+    const photos = productPhotos.map((photo) => <SwiperSlide key={photo}>
         <div className='mr-auto ml-auto p-2 rounded-lg'>
             <Image src={`/example_photos/${photo}`} layout="fixed" width={450} height={300} />
         </div>

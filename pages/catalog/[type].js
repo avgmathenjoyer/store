@@ -14,7 +14,7 @@ export default function Products({ offers, type }) {
 
     const OfferComponents = offers.map((offer) => {
         return (
-            <OfferCard name={offer.name} price={offer.price} img={offer.img} subheading={offer.subheading} id={offer._id}/>
+            <OfferCard name={offer.name} price={offer.price} img={offer.img} subheading={offer.subheading} id={offer._id} key={offer._id}/>
         )
     })
 
